@@ -1,0 +1,21 @@
+<body>
+
+    <h1 class="profile__title">Your animals
+
+    </h1>
+
+    <section class="profileAnimals__list">
+        {{#each animals}}
+
+        <article class="profileAnimals__item">
+            <h3 class="profileAnimals__name">
+                {{this.name}}
+
+            </h3>
+
+            <img src="/assets/{{this.name}}.svg" alt={{this.name}} class="profileAnimals__image">
+        </article>
+        {{/each}}
+    </section>
+
+</body>

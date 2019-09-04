@@ -55,11 +55,11 @@ test("Check getAnimals function", t => {
 });
 
 test("Check return all adopted relationships", t => {
-  const adoptions = "tbd";
+  const adoptions = [{ name: "octopus" }];
 
   runDbBuild((err, res) => {
     t.error(err, "No error for DbBuild");
-    queries.getData.getAdoptions((err, data) => {
+    queries.getData.getAdoptions("Gregor", (err, data) => {
       t.error(err, "No error for getAdoptions");
       t.deepEqual(data, adoptions, "Correct adoptions are returned");
       t.end();

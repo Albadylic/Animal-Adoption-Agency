@@ -3,10 +3,12 @@ const animalRequest = require("../model/queries/getData");
 const getAdoptions = animalRequest.getAdoptions;
 
 exports.get = (req, res) => {
-  getAdoptions("Gregor", (err, result) => {
+  const username = req.url.split("=")[1];
+  getAdoptions(username, (err, result) => {
     res.render("profile", {
       activePage: { profile: true },
-      animals: result
+      animals: result,
+      username: username
     });
   });
 };

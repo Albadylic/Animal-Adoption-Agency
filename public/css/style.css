@@ -1,9 +1,11 @@
-.adoptAnimals__list {
+.adoptAnimals__list,
+.profileAnimals__list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.adoptAnimals__item {
+.adoptAnimals__item,
+.profileAnimals__item {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -12,7 +14,8 @@
   margin: 0.1em;
 }
 
-.adoptAnimals__image {
+.adoptAnimals__image,
+.profileAnimals__image {
   width: 15vw;
   height: auto;
 }
